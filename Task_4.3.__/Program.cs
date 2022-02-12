@@ -8,12 +8,11 @@ namespace Task_4._3.__
         {
             Console.WriteLine("Введите своё имя");
             string name = Console.ReadLine();
-            Console.WriteLine("Ваше имя по буквам:");
-            foreach (var ch in name)
+            Console.WriteLine("\nВаше имя в обратном порядке:");
+            for(int i = name.Length - 1; i >= 0; i--)
             {
-                Console.Write($"{ch} ");
+                Console.Write(name[i]);
             }
-            Console.Write($"Последняя буква имени: {name[^1]}");
             Console.ReadKey();
         }
     }
