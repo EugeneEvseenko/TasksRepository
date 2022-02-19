@@ -4,9 +4,9 @@ namespace Task_5._1._6
 {
     internal class Program
     {
-        static int[] GetArrayFromConsole()
+        static int[] GetArrayFromConsole(int size = 5)
         {
-            var result = new int[5];
+            var result = new int[size];
 
             for (int i = 0; i < result.Length; i++)
             {
@@ -35,21 +35,21 @@ namespace Task_5._1._6
             }
             return outArray;
         }
-        static void PrintArray(string label, int[] arr)
+        static void ShowArray(int[] arr, string label, bool sort = false)
         {
+            if(sort) arr = GetSortedArray(arr);
             Console.WriteLine($"============ {label.ToUpper()} ============");
-            for (int i = 0;i < arr.Length; i++)
+            foreach (int item in arr)
             {
-                Console.Write($"{arr[i]} ");
+                Console.Write($"{item} ");
             }
             Console.WriteLine("\n");
         }
         static void Main(string[] args)
         {
-            int[] array = GetArrayFromConsole();
-            int[] sortedArray = GetSortedArray(array);
-            PrintArray("Несортированный массив", array);
-            PrintArray("Сортированный массив", sortedArray);
+            int[] array = GetArrayFromConsole(10);
+            ShowArray(array, "Несортированный массив");
+            ShowArray(array, "Сортированный массив", true);
             Console.ReadKey();
         }
     }
