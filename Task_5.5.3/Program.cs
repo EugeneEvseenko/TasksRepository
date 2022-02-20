@@ -6,6 +6,7 @@ namespace Task_5._5._3
     {
         static void Echo(string saidworld, int deep)
         {
+            Console.BackgroundColor = (ConsoleColor)deep;
             var modif = saidworld;
             if(modif.Length > 2) modif = modif.Remove(0, 2);
             Console.WriteLine($"...{modif}");
