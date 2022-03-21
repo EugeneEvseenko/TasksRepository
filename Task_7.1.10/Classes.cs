@@ -32,6 +32,7 @@ namespace Task_7._1._10
         }
         public override void Display()
         {
+            base.Display();
             Console.WriteLine("Метод класса DerivedClass");
         }
     }
