@@ -10,6 +10,10 @@ namespace Task_7._1._10
         {
             Name = name;
         }
+        public virtual void Display()
+        {
+            Console.WriteLine("Метод класса BaseClass");
+        }
     }
 
     class DerivedClass : BaseClass
@@ -25,6 +29,10 @@ namespace Task_7._1._10
         public DerivedClass(string name, string description, int counter) : this(name, description)
         {
             Counter = counter;
+        }
+        public override void Display()
+        {
+            Console.WriteLine("Метод класса DerivedClass");
         }
     }
 }
