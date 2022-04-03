@@ -7,7 +7,7 @@ namespace Task_9._3._12
         delegate void ShowMessageDelegate(string _message);
         static void Main(string[] args)
         {
-            ShowMessageDelegate sd = delegate (string _message)
+            ShowMessageDelegate sd = (string _message) =>
             {
                 Console.WriteLine(_message);
             };
