@@ -23,6 +23,7 @@ namespace Final_Task_10._2
                 _ => Addition(a, b),
             };
             Logger.Event($"{a} {operation.GetEnumDescription()} {b} = {result}");
+            return result;
         }
         public int Addition(int a, int b) => a + b;
         public int Substract(int a, int b) => a - b;
