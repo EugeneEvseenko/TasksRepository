@@ -17,7 +17,7 @@ namespace Task_7._6._2
         static void Main(string[] args)
         {
             var car = new Car<ElectricEngine>(new ElectricEngine());
-            car.Engine = new GasEngine(); // ошибка
+            //car.Engine = new GasEngine(); // ошибка
             Console.WriteLine("Hello World!");
         }
     }
