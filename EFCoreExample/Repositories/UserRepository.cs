@@ -12,8 +12,7 @@ namespace EFCoreExample.Repositories
         /// </summary>
         public int GetBooksCountFromUser(int userId)
         {
-            return _context.Books.Count(x => 
-                _context.Users.FirstOrDefault(x => x.Id == userId).UserBooks.Contains(x));
+            return _context.Users.FirstOrDefault(x => x.Id == userId).UserBooks.Count();
         }
 
         /// <summary>
